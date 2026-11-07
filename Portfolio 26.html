@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mannan Ansari — Graphic Designer & Visual Artist</title>
+  <meta name="description" content="Mannan Ansari — Brand identity designer, art director, and visual artist crafting iconic visual identities, packaging, editorial layout, and high-impact graphics.">
+  
+  <!-- Google Fonts: Bebas Neue, Syne, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Glow & Stars Background Layer -->
+  <div class="ambient-glow-wrapper">
+    <div class="glow-orb glow-orb-top"></div>
+    <div class="glow-orb glow-orb-left"></div>
+    <div class="glow-orb glow-orb-right"></div>
+  </div>
+  <canvas id="particle-canvas"></canvas>
+  <div class="noise-overlay"></div>
+
+  <!-- ==========================================================================
+       SITE HEADER / FLOATING GLASS NAVBAR WITH SCROLLSPY SLIDING PILL
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="navbar-container">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo">
+        MANNAN ANSARI <span class="logo-dot"></span>
+      </a>
+
+      <!-- Center Pill Nav Links with Sliding Indicator -->
+      <nav class="nav-pill-wrapper">
+        <div class="nav-sliding-pill"></div>
+        <ul class="nav-links">
+          <li class="nav-link-item active"><a href="#about">About</a></li>
+          <li class="nav-link-item"><a href="#skills">Skills</a></li>
+          <li class="nav-link-item"><a href="#table-of-contents">Contents</a></li>
+          <li class="nav-link-item"><a href="#social-media">Portfolio</a></li>
+          <li class="nav-link-item"><a href="#services">Services</a></li>
+          <li class="nav-link-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right CTA Button -->
+      <a href="#contact" class="nav-cta-btn">
+        <span>Start a Project</span>
+        <span class="btn-arrow-circle">→</span>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#table-of-contents">Contents</a></li>
+      <li><a href="#social-media">Portfolio</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- ==========================================================================
+         HERO SECTION WITH 3D LAYERED PARALLAX & SCROLL ANIMATION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      
+      <!-- Ambient Dome Glow Behind Hero -->
+      <div class="hero-ambient-dome"></div>
+
+      <!-- Intro Tag -->
+      <div class="hero-intro-pill reveal-on-scroll">
+        <span>Hi, I am</span>
+      </div>
+
+      <!-- Center Stage: 3D Layered Typography & Portrait -->
+      <div class="hero-stage-container">
+        
+        <!-- Giant Typography Layered Behind Portrait (Parallax Scroll Driven) -->
+        <h1 class="hero-giant-typography" id="heroTypography">
+          <span>Mannan Ansari</span>
+        </h1>
+
+        <!-- High-Definition Hero Portrait Cutout (Uploaded Anchor Portrait) -->
+        <div class="hero-portrait-wrapper" id="heroPortrait">
+          <div class="portrait-ambient-glow"></div>
+          <img 
+            src="assets/hero_anchor_transparent.png" 
+            alt="Mannan Ansari — Graphic Designer & Visual Artist" 
+            class="hero-portrait-img"
+            onerror="this.src='assets/hero_anchor.png'"
+          >
+        </div>
+
+      </div>
+
+      <!-- Hero Bottom Content Deck: Left Copy & Right Glass Rating Card -->
+      <div class="hero-bottom-deck" id="heroBottomDeck">
+        
+        <!-- Left Hero Copy Block -->
+        <div class="hero-left-block reveal-on-scroll delay-1">
+          <div class="hero-trust-tag">
+            <span class="pulsing-dot"></span>
+            <span>Trusted by 100+ Global Brands</span>
+          </div>
+          <h2 class="hero-main-title">
+            Visuals that define brands<br>& captivate audiences
+          </h2>
+          <div class="hero-action-buttons">
+            <a href="#contact" class="btn-primary-pill">
+              <span>Start a Project</span>
+              <span class="btn-arrow-circle">→</span>
+            </a>
+            <a href="#social-media" class="btn-glass-pill">
+              <span>View My Work</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Floating Glass Ratings Card -->
+        <div class="hero-rating-card reveal-on-scroll delay-2">
+          <div class="rating-avatars-row">
+            <div class="client-avatar-stack">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Client Avatar 1" class="client-avatar">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="Client Avatar 2" class="client-avatar">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="Client Avatar 3" class="client-avatar">
+              <div class="avatar-badge-star">★</div>
+            </div>
+            <span class="rating-score-txt">4.99 / 5.0</span>
+          </div>
+          <p class="rating-pitch-text">
+            <strong>99.8% Of My Clients Are Satisfied</strong> — Elevate Your Brand Today
+          </p>
+          <div class="rating-badges-pills">
+            <span class="micro-pill highlight">⚡ Brand Discovery</span>
+            <span class="micro-pill">⏱ 24h Turnaround</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Interactive Hero Scroll Anchor (Bouncing & Scroll-Reactive) -->
+      <div class="hero-scroll-anchor-wrapper" id="heroScrollAnchor">
+        <a href="#about" class="hero-scroll-anchor" aria-label="Scroll to About section">
+          <span class="scroll-mouse-icon">
+            <span class="scroll-wheel-dot"></span>
+          </span>
+          <span class="scroll-text">Scroll to Explore</span>
+          <span class="scroll-chevron">↓</span>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- ==========================================================================
+         ANIMATED LOGO MARQUEE (LEFT-TO-RIGHT SEAMLESS INFINITE LOOP)
+         ========================================================================== -->
+    <div class="marquee-section logo-marquee-section" aria-label="Client Brand Logos Marquee">
+      <div class="marquee-track logo-marquee-track">
+        <!-- Group 1 -->
+        <div class="marquee-content logo-marquee-content">
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_kotak.png" alt="Kotak Neo" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_sheraton.png" alt="Sheraton" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_sahil.png" alt="Sahil" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_thefern.png" alt="The Fern Hotels" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_sarvmangala.png" alt="Sarvmangala Avenue" class="marquee-logo-img logo-compact"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_enrise.png" alt="Enrise Hotels" class="marquee-logo-img logo-compact"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_ss_infinitus.png" alt="SS Infinitus" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_jardin.png" alt="Jardin Hotel" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_orchid.png" alt="Orchid Enclave" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_sayaji.png" alt="Sayaji" class="marquee-logo-img logo-compact"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_crescent.png" alt="Crescent" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_egniter.png" alt="Egniter" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_jnrt.png" alt="Jehan Numa Retreat" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_kalyan.png" alt="Kalyan" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_capers.png" alt="Capers" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_d2r.png" alt="D2R" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+        </div>
+
+        <!-- Group 2 (Identical for zero-gap seamless infinite loop) -->
+        <div class="marquee-content logo-marquee-content" aria-hidden="true">
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_kotak.png" alt="Kotak Neo" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_sheraton.png" alt="Sheraton" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_sahil.png" alt="Sahil" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_thefern.png" alt="The Fern Hotels" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_sarvmangala.png" alt="Sarvmangala Avenue" class="marquee-logo-img logo-compact"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_enrise.png" alt="Enrise Hotels" class="marquee-logo-img logo-compact"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_ss_infinitus.png" alt="SS Infinitus" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_jardin.png" alt="Jardin Hotel" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_orchid.png" alt="Orchid Enclave" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_sayaji.png" alt="Sayaji" class="marquee-logo-img logo-compact"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_crescent.png" alt="Crescent" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_egniter.png" alt="Egniter" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_jnrt.png" alt="Jehan Numa Retreat" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_kalyan.png" alt="Kalyan" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_capers.png" alt="Capers" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+          <div class="marquee-logo-item"><img src="assets/marquee_logos/logo_d2r.png" alt="D2R" class="marquee-logo-img"></div>
+          <div class="marquee-logo-separator">✦</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         ABOUT ME SECTION (GRAPHIC DESIGNER FOCUSED)
+         ========================================================================== -->
+    <section class="content-section" id="about">
+      <div class="about-grid">
+        
+        <!-- Left Sticky Intro & Mini Stats -->
+        <div class="about-left-col reveal-on-scroll">
+          <div class="section-tag-wrapper">
+            <span class="section-tag-dot"></span>
+            <span class="section-tag-title">About Me</span>
+            <span class="section-tag-line"></span>
+          </div>
+          <h3 class="section-headline">
+            Crafting Iconic Visual Identities & Bold Systems
+          </h3>
+          
+          <div class="about-mini-stats">
+            <div class="mini-stat-card">
+              <div class="mini-stat-num">6<span>+</span></div>
+              <div class="mini-stat-label">Years of Brand & Graphic Design Mastery</div>
+            </div>
+            <div class="mini-stat-card">
+              <div class="mini-stat-num">450<span>+</span></div>
+              <div class="mini-stat-label">Brand Identities & Visual Assets Delivered</div>
+            </div>
+            <div class="mini-stat-card">
+              <div class="mini-stat-num">99.8<span>%</span></div>
+              <div class="mini-stat-label">Client Approval & On-Time Rate</div>
+            </div>
+            <div class="mini-stat-card">
+              <div class="mini-stat-num">40<span>+</span></div>
+              <div class="mini-stat-label">Global Design Recognitions & Features</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Detailed Narrative & Capabilities -->
+        <div class="about-right-col reveal-on-scroll delay-1">
+          <p class="about-lead-text">
+            Hey there, I'm <span class="highlight">Mannan Ansari</span> — a brand identity designer, art director, and visual artist. I turn ambitious business visions into unforgettable visual languages. From comprehensive branding systems and bespoke typography to high-converting packaging, editorial print, and 3D product visuals — I build brands designed to stand out and dominate their markets.
+          </p>
+
+          <div class="about-actions-row">
+            <a href="#contact" class="btn-primary-pill">
+              <span>Start a Project</span>
+              <span class="btn-arrow-circle">→</span>
+            </a>
+            <a href="#social-media" class="btn-glass-pill">
+              <span>View My Work</span>
+              <span>↗</span>
+            </a>
+          </div>
+
+          <!-- Skills & Tooling Cloud -->
+          <div class="skills-cloud-box">
+            <div class="skills-cloud-header">Core Graphic Design Stack & Expertise</div>
+            <div class="skills-tags-wrap">
+              <span class="skill-tag">Brand Identity & Logo Suites</span>
+              <span class="skill-tag">Bespoke Typography & Lettering</span>
+              <span class="skill-tag">Luxury Packaging & Dielines</span>
+              <span class="skill-tag">Adobe Illustrator & Photoshop</span>
+              <span class="skill-tag">Adobe InDesign (Editorial)</span>
+              <span class="skill-tag">Art Direction & Key Visuals</span>
+              <span class="skill-tag">3D Product Mockups & Blender</span>
+              <span class="skill-tag">Print Production & CMYK Specs</span>
+              <span class="skill-tag">Figma Digital Design Kits</span>
+              <span class="skill-tag">Campaign Marketing Collateral</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CLIENT LOGOS BAR ("TRUSTED BY") - MANNAN'S REAL CLIENTS
+         ========================================================================== -->
+    <section class="client-logos-section reveal-on-scroll">
+      <div class="client-logos-grid">
+        <span class="client-logo-item">KOTAK NEO</span>
+        <span class="client-logo-item">JAHAN NUMA PALACE</span>
+        <span class="client-logo-item">NOOR US SUBAH</span>
+        <span class="client-logo-item">THE FERN HOTELS</span>
+        <span class="client-logo-item">ENRISE</span>
+        <span class="client-logo-item">JARDIN HOTEL</span>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         1. MY SKILLS – SOFTWARE & TOOLS
+         ========================================================================== -->
+    <section class="skills-software-section" id="skills">
+      <div class="section-tag-wrapper reveal-on-scroll">
+        <span class="section-tag-dot"></span>
+        <span class="section-tag-title">Software & Tools</span>
+      </div>
+      <h3 class="section-headline reveal-on-scroll">MY SKILLS</h3>
+      <p class="category-subtext reveal-on-scroll" style="margin-bottom: 20px;">
+        Core creative stack across graphic design, typography, brand identity, motion graphics, and generative AI workflows.
+      </p>
+
+      <div class="skills-software-grid">
+        
+        <!-- 1. Adobe Photoshop -->
+        <div class="software-card reveal-on-scroll">
+          <div class="software-card-top">
+            <div class="software-icon-wrapper icon-ps">
+              <img src="assets/software_icons/icon_photoshop.png" alt="Adobe Photoshop" class="software-icon-img">
+            </div>
+            <span class="software-level-badge">Mastery</span>
+          </div>
+          <div class="software-card-body">
+            <h4>Adobe Photoshop</h4>
+            <p>Advanced raster composition, photo manipulation, high-end product retouching, and mockups.</p>
+          </div>
+        </div>
+
+        <!-- 2. Adobe Illustrator -->
+        <div class="software-card reveal-on-scroll delay-1">
+          <div class="software-card-top">
+            <div class="software-icon-wrapper icon-ai">
+              <img src="assets/software_icons/icon_illustrator.png" alt="Adobe Illustrator" class="software-icon-img">
+            </div>
+            <span class="software-level-badge">Mastery</span>
+          </div>
+          <div class="software-card-body">
+            <h4>Adobe Illustrator</h4>
+            <p>Vector brand identity, custom logo suites, bespoke typography, icons, dielines, and print production.</p>
+          </div>
+        </div>
+
+        <!-- 3. Adobe Premiere Pro -->
+        <div class="software-card reveal-on-scroll delay-2">
+          <div class="software-card-top">
+            <div class="software-icon-wrapper icon-pr">
+              <img src="assets/software_icons/icon_premiere.png" alt="Adobe Premiere Pro" class="software-icon-img">
+            </div>
+            <span class="software-level-badge">Advanced</span>
+          </div>
+          <div class="software-card-body">
+            <h4>Adobe Premiere Pro</h4>
+            <p>Timeline editing, commercial promos, social campaign video pacing, sound sync, and color grading.</p>
+          </div>
+        </div>
+
+        <!-- 4. Adobe Lightroom -->
+        <div class="software-card reveal-on-scroll delay-3">
+          <div class="software-card-top">
+            <div class="software-icon-wrapper icon-lr">
+              <img src="assets/software_icons/icon_lightroom.png" alt="Adobe Lightroom" class="software-icon-img">
+            </div>
+            <span class="software-level-badge">Advanced</span>
+          </div>
+          <div class="software-card-body">
+            <h4>Adobe Lightroom</h4>
+            <p>Color grading, RAW image processing, tone curves, and atmospheric brand photography presets.</p>
+          </div>
+        </div>
+
+        <!-- 5. Canva -->
+        <div class="software-card reveal-on-scroll">
+          <div class="software-card-top">
+            <div class="software-icon-wrapper icon-canva">
+              <img src="assets/software_icons/icon_canva.png" alt="Canva" class="software-icon-img">
+            </div>
+            <span class="software-level-badge">Speed & Scale</span>
+          </div>
+          <div class="software-card-body">
+            <h4>Canva</h4>
+            <p>High-velocity brand template systems, quick social marketing graphics, and client-ready decks.</p>
+          </div>
+        </div>
+
+        <!-- 6. CapCut -->
+        <div class="software-card reveal-on-scroll delay-1">
+          <div class="software-card-top">
+            <div class="software-icon-wrapper icon-capcut">
+              <img src="assets/software_icons/icon_capcut.png" alt="CapCut" class="software-icon-img icon-contain">
+            </div>
+            <span class="software-level-badge">Short-Form</span>
+          </div>
+          <div class="software-card-body">
+            <h4>CapCut</h4>
+            <p>Dynamic reels, viral motion captions, pacing, sound effects, and short-form campaign video design.</p>
+          </div>
+        </div>
+
+        <!-- 7. Figma -->
+        <div class="software-card reveal-on-scroll delay-2">
+          <div class="software-card-top">
+            <div class="software-icon-wrapper icon-figma">
+              <img src="assets/software_icons/icon_figma.png" alt="Figma" class="software-icon-img icon-contain">
+            </div>
+            <span class="software-level-badge">Design Systems</span>
+          </div>
+          <div class="software-card-body">
+            <h4>Figma</h4>
+            <p>Digital design kits, UI/UX architecture, responsive components, typography scales, and prototypes.</p>
+          </div>
+        </div>
+
+        <!-- 8. AI Tools -->
+        <div class="software-card reveal-on-scroll delay-3">
+          <div class="software-card-top">
+            <div class="software-icon-wrapper icon-ai-tools">
+              <img src="assets/software_icons/icon_aitools.png" alt="AI Tools" class="software-icon-img icon-contain">
+            </div>
+            <span class="software-level-badge">Generative</span>
+          </div>
+          <div class="software-card-body">
+            <h4>AI Tools</h4>
+            <p>Midjourney, DALL·E, Adobe Firefly, and ChatGPT for visual ideation, concept art, and rapid exploration.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         2. TABLE OF CONTENTS SECTION
+         ========================================================================== -->
+    <section class="toc-section" id="table-of-contents">
+      <div class="toc-container reveal-on-scroll">
+        <div class="toc-header-deck">
+          <div>
+            <div class="section-tag-wrapper">
+              <span class="section-tag-dot"></span>
+              <span class="section-tag-title">Curated Disciplines</span>
+            </div>
+            <h3 class="section-headline">TABLE OF CONTENTS</h3>
+          </div>
+          <div class="toc-subtitle">Select any category to jump directly to its gallery</div>
+        </div>
+
+        <nav class="toc-list" aria-label="Portfolio Table of Contents">
+          
+          <!-- 01 — SOCIAL MEDIA -->
+          <a href="#social-media" class="toc-item">
+            <div class="toc-item-left">
+              <span class="toc-num">01</span>
+              <div class="toc-item-details">
+                <span class="toc-title">SOCIAL MEDIA</span>
+                <span class="toc-desc">Instagram Creatives, Carousels, Ad Campaigns & Promotional Graphics</span>
+              </div>
+            </div>
+            <div class="toc-arrow-pill">
+              <span>Explore</span>
+              <span>→</span>
+            </div>
+          </a>
+
+          <!-- 02 — LOGO DESIGN -->
+          <a href="#logo-design" class="toc-item">
+            <div class="toc-item-left">
+              <span class="toc-num">02</span>
+              <div class="toc-item-details">
+                <span class="toc-title">LOGO DESIGN</span>
+                <span class="toc-desc">Brand Marks, Vector Identity Suites, Crests & Monograms</span>
+              </div>
+            </div>
+            <div class="toc-arrow-pill">
+              <span>Explore</span>
+              <span>→</span>
+            </div>
+          </a>
+
+          <!-- 03 — THUMBNAILS -->
+          <a href="#thumbnails" class="toc-item">
+            <div class="toc-item-left">
+              <span class="toc-num">03</span>
+              <div class="toc-item-details">
+                <span class="toc-title">THUMBNAILS</span>
+                <span class="toc-desc">High-CTR YouTube Thumbnails, Stock Trading, IPO & Finance Creatives</span>
+              </div>
+            </div>
+            <div class="toc-arrow-pill">
+              <span>Explore</span>
+              <span>→</span>
+            </div>
+          </a>
+
+          <!-- 04 — PRINT DESIGN -->
+          <a href="#print-design" class="toc-item">
+            <div class="toc-item-left">
+              <span class="toc-num">04</span>
+              <div class="toc-item-details">
+                <span class="toc-title">PRINT DESIGN</span>
+                <span class="toc-desc">Luxury Hotel Menus, Brochures, Visiting Cards, Stationery & Signage</span>
+              </div>
+            </div>
+            <div class="toc-arrow-pill">
+              <span>Explore</span>
+              <span>→</span>
+            </div>
+          </a>
+
+          <!-- 05 — POSTERS -->
+          <a href="#posters" class="toc-item">
+            <div class="toc-item-left">
+              <span class="toc-num">05</span>
+              <div class="toc-item-details">
+                <span class="toc-title">POSTERS</span>
+                <span class="toc-desc">Campaign Art, Public Event Posters, Advertising & Key Visuals</span>
+              </div>
+            </div>
+            <div class="toc-arrow-pill">
+              <span>Explore</span>
+              <span>→</span>
+            </div>
+          </a>
+
+        </nav>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. PORTFOLIO CATEGORY SECTIONS
+         ========================================================================== -->
+
+    <!-- 01. SOCIAL MEDIA SECTION -->
+    <section class="portfolio-category-section" id="social-media">
+      <div class="category-index-badge reveal-on-scroll">01 / 05 — SOCIAL MEDIA</div>
+      <div class="category-header-deck reveal-on-scroll">
+        <h3 class="section-headline">Social Media & Campaign Creatives</h3>
+        <p class="category-subtext">
+          High-conversion creatives tailored for Instagram, reels, LinkedIn, and promotional campaigns. Engineered with thumb-stopping visual hierarchy.
+        </p>
+      </div>
+
+      <div class="category-grid category-grid-social">
+        
+        <!-- Social Card 1 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/social_kotak_v1.jpg" alt="Kotak Neo IPO & Stock Market Trading Post" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ 10M+ Reach</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Kotak Neo — IPO Market Creative</h4>
+            <p class="portfolio-item-meta">Trading campaign visual language & market insights post</p>
+          </div>
+        </article>
+
+        <!-- Social Card 2 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-1">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/social_kotak_v2.jpg" alt="Kotak Neo Trading Strategy Social Carousel" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Viral Creative</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Kotak Neo — Strategy Reel Cover</h4>
+            <p class="portfolio-item-meta">High-contrast financial breakdown & engagement visual</p>
+          </div>
+        </article>
+
+        <!-- Social Card 3 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-2">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/social_kotak_v3.jpg" alt="Kotak Neo Options Feature Social Graphic" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ High CTR</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Kotak Neo — Options Feature Post</h4>
+            <p class="portfolio-item-meta">Product feature highlight & dynamic trading graphics</p>
+          </div>
+        </article>
+
+        <!-- Social Card 4 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-3">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/social_kotak_v4.jpg" alt="Kotak Neo Wealth Growth Campaign" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Brand Campaign</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Kotak Neo — Wealth Builder Creative</h4>
+            <p class="portfolio-item-meta">Investment growth promotional asset & typography</p>
+          </div>
+        </article>
+
+        <!-- Social Card 5 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/social_ferns_1.jpg" alt="The Fern Hotels Luxury Resort Social Carousel" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Luxury Hospitality</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">The Ferns — Luxury Staycation Post</h4>
+            <p class="portfolio-item-meta">Editorial hospitality layout & guest experience creative</p>
+          </div>
+        </article>
+
+        <!-- Social Card 6 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-1">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/social_ferns_2.jpg" alt="The Fern Hotels Eco-Luxury Promotional Ad" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Seasonal Campaign</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">The Ferns — Eco-Escape Promotion</h4>
+            <p class="portfolio-item-meta">Vibrant brand storytelling & seasonal booking ad</p>
+          </div>
+        </article>
+
+        <!-- Social Card 7 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-2">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/social_ferns_3.jpg" alt="The Fern Hotels Culinary Experience Post" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Culinary Reel</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">The Ferns — Fine Dining Creative</h4>
+            <p class="portfolio-item-meta">Gourmet dining promo with sensory gastronomy imagery</p>
+          </div>
+        </article>
+
+        <!-- Social Card 8 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-3">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/social_ferns_4.jpg" alt="The Fern Hotels Weekend Getaway Carousel" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Weekend Getaway</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">The Ferns — Weekend Escape Carousel</h4>
+            <p class="portfolio-item-meta">Lifestyle resort visual pacing with curated guest amenities</p>
+          </div>
+        </article>
+
+        <!-- Social Card 9 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/social_ferns_5.jpg" alt="The Fern Hotels Heritage Retreat Campaign" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Heritage Retreat</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">The Ferns — Heritage Hospitality Post</h4>
+            <p class="portfolio-item-meta">Regal architectural backdrop with bespoke promotional typography</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 02. LOGO DESIGN SECTION -->
+    <section class="portfolio-category-section" id="logo-design">
+      <div class="category-index-badge reveal-on-scroll">02 / 05 — LOGO DESIGN</div>
+      <div class="category-header-deck reveal-on-scroll">
+        <h3 class="section-headline">Brand Identities & Logo Concepts</h3>
+        <p class="category-subtext">
+          Strategic brand marks, custom monograms, and timeless vector identity systems designed for memorable positioning and effortless scaling.
+        </p>
+      </div>
+
+      <div class="category-grid category-grid-logos">
+        
+        <!-- Logo Card 1 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/logo_sarvamangala_1.jpg" alt="Sarvamangala Spiritual Luxury Brand Crest" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Heritage Crest</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Sarvamangala — Spiritual Luxury Crest</h4>
+            <p class="portfolio-item-meta">Regal primary emblem, sacred geometry & bespoke typography</p>
+          </div>
+        </article>
+
+        <!-- Logo Card 2 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-1">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/logo_jnp_1.jpg" alt="Jahan Numa Palace Royal Emblem" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Royal Palace</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Jahan Numa Palace — Royal Crest</h4>
+            <p class="portfolio-item-meta">5-star heritage palace insignia & gold foil brand seal</p>
+          </div>
+        </article>
+
+        <!-- Logo Card 3 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-2">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/logo_enrise_1.jpg" alt="Enrise Hotels Modern Visual Identity" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Modern Hospitality</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Enrise Hotels — Modern Visual Mark</h4>
+            <p class="portfolio-item-meta">Clean geometric typography & architectural hotel branding</p>
+          </div>
+        </article>
+
+        <!-- Logo Card 4 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-3">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/logo_jardin_1.jpg" alt="Jardin Hotel Boutique Floral Monogram" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Boutique Chic</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Jardin Hotel — Floral Monogram</h4>
+            <p class="portfolio-item-meta">Bespoke botanical lettering & dining seal</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 03. THUMBNAILS SECTION -->
+    <section class="portfolio-category-section" id="thumbnails">
+      <div class="category-index-badge reveal-on-scroll">03 / 05 — THUMBNAILS</div>
+      <div class="category-header-deck reveal-on-scroll">
+        <h3 class="section-headline">YouTube, Finance & IPO Thumbnails</h3>
+        <p class="category-subtext">
+          High-CTR YouTube and promotional thumbnails built with psychological visual hierarchy, bold typography, and cinematic lighting to maximize views.
+        </p>
+      </div>
+
+      <div class="category-grid category-grid-thumbnails">
+        
+        <!-- Thumbnail Card 1 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/kotak_neo.jpg" alt="Kotak Neo Stock Market & IPO Analysis Thumbnail" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ +240% CTR Lift</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Stock Market & IPO Analysis Thumbnail</h4>
+            <p class="portfolio-item-meta">High-contrast stock trading thumbnail with prominent data focal points</p>
+          </div>
+        </article>
+
+        <!-- Thumbnail Card 2 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-1">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/thumb_kotak_h2.jpg" alt="Trading Strategy & Market Prediction Thumbnail" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Finance YouTube</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Trading Strategy & Market Prediction</h4>
+            <p class="portfolio-item-meta">Engaging headline layout, chart visual integration & expressive tone</p>
+          </div>
+        </article>
+
+        <!-- Thumbnail Card 3 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-2">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/thumb_kotak_h3.jpg" alt="Options Trading Mastery Guide Thumbnail" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ High Engagement</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Options Trading Mastery Breakdown</h4>
+            <p class="portfolio-item-meta">Punchy vector highlights, bold numerals & instant visual clarity</p>
+          </div>
+        </article>
+
+        <!-- Thumbnail Card 4 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-3">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/thumb_kotak_h4.jpg" alt="Investment Portfolio & Wealth Growth Thumbnail" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Wealth Guide</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Portfolio Wealth & Investment Guide</h4>
+            <p class="portfolio-item-meta">Clear typographic hook with premium finance brand styling</p>
+          </div>
+        </article>
+
+        <!-- Thumbnail Card 5 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/thumb_jnp_dining.jpg" alt="Jahan Numa Palace Royal Dining Experience Thumbnail" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Hospitality Video</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Jahan Numa Palace — Royal Dining Story</h4>
+            <p class="portfolio-item-meta">Atmospheric culinary lighting with regal framing & high click-through composition</p>
+          </div>
+        </article>
+
+        <!-- Thumbnail Card 6 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-1">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/thumb_enrise_suite.jpg" alt="Enrise Hotels Suite Experience Video Thumbnail" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Suite Tour</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Enrise Hotels — Suite Walkthrough Video</h4>
+            <p class="portfolio-item-meta">Modern interior focal points, bold title hierarchy & brand badges</p>
+          </div>
+        </article>
+
+        <!-- Thumbnail Card 7 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-2">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/thumb_ferns_tour.jpg" alt="The Ferns Luxury Resort Walkthrough Thumbnail" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Resort Tour</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">The Ferns — Eco-Resort Experience Video</h4>
+            <p class="portfolio-item-meta">Scenic landscape thumbnail with engaging call-out overlays & view metrics</p>
+          </div>
+        </article>
+
+        <!-- Thumbnail Card 8 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-3">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/thumb_wilderness_safari.jpg" alt="Jahan Numa Wilderness Jungle Safari Story Thumbnail" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Safari Series</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Jahan Numa Wilderness — Safari Episode</h4>
+            <p class="portfolio-item-meta">Wild nature photography with high-energy typography & dramatic contrast</p>
+          </div>
+        </article>
+
+        <!-- Thumbnail Card 9 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/thumb_jardin_promo.jpg" alt="Jardin Hotel Grand Gala Promo Video Thumbnail" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Event Teaser</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Jardin Hotel — Grand Gala Promo Video</h4>
+            <p class="portfolio-item-meta">Luxe evening event preview with cinematic color grading & gold text accents</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 04. PRINT DESIGN SECTION -->
+    <section class="portfolio-category-section" id="print-design">
+      <div class="category-index-badge reveal-on-scroll">04 / 05 — PRINT DESIGN</div>
+      <div class="category-header-deck reveal-on-scroll">
+        <h3 class="section-headline">Print Materials, Stationery & Menus</h3>
+        <p class="category-subtext">
+          Tangible, tactile print design crafted for luxury hospitality. From fine dining menus and embossed visiting cards to brochures and large-format banners.
+        </p>
+      </div>
+
+      <div class="category-grid category-grid-print">
+        
+        <!-- Print Card 1 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/print_nusp_1.jpg" alt="Noor Us Subah Palace Luxury Hotel Brochure" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Heritage Print</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Noor Us Subah — Luxury Hotel Brochure</h4>
+            <p class="portfolio-item-meta">Multi-page heritage publication, architectural grids & foil finish</p>
+          </div>
+        </article>
+
+        <!-- Print Card 2 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-1">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/print_nusp_2.jpg" alt="Noor Us Subah Palace Fine Dining Menu Design" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Fine Dining</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Noor Us Subah — Royal Dining Menu</h4>
+            <p class="portfolio-item-meta">Bespoke culinary layout, embossed border & classic serif typography</p>
+          </div>
+        </article>
+
+        <!-- Print Card 3 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-2">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/print_nusp_3.jpg" alt="Noor Us Subah Royal Heritage Invitation Suite" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Invitation Suite</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Noor Us Subah — Royal Event Stationery</h4>
+            <p class="portfolio-item-meta">VVIP event invitations, gilded typography & textured cardstock</p>
+          </div>
+        </article>
+
+        <!-- Print Card 4 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/print_jnp_2.jpg" alt="Jahan Numa Palace Guest Collateral & Cards" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Palace Stationery</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Jahan Numa Palace — Guest Collateral</h4>
+            <p class="portfolio-item-meta">Luxury visiting cards, letterheads, and welcome folios</p>
+          </div>
+        </article>
+
+        <!-- Print Card 5 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-1">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/print_enrise_2.jpg" alt="Enrise Bhopal Print Collateral & Keycards" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Hotel Suite</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Enrise Hotels — Guest Touchpoints</h4>
+            <p class="portfolio-item-meta">Room service compendiums, keycard sleeves & promotional flyers</p>
+          </div>
+        </article>
+
+        <!-- Print Card 6 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-2">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/print_orchid.jpg" alt="Orchid Eco-Luxury Brand Print Presentation" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Editorial Print</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Orchid Resorts — Brand Print Portfolio</h4>
+            <p class="portfolio-item-meta">Eco-friendly presentation folders, brochures & sustainable print</p>
+          </div>
+        </article>
+
+        <!-- Print Card 7 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-3">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/print_nusp_4.jpg" alt="Noor Us Subah Palace Luxury Amenity & Suite Portfolio" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Suite Collateral</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Noor Us Subah — Suite Collateral Kit</h4>
+            <p class="portfolio-item-meta">Gilded room folios, bespoke door signs & luxury guest stationery</p>
+          </div>
+        </article>
+
+        <!-- Print Card 8 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/print_enrise_4.jpg" alt="Enrise Hotels Event Brochure & Fine Print" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Event Brochure</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Enrise Hotels — Conference Collateral</h4>
+            <p class="portfolio-item-meta">Corporate meeting schedules, promotional booklets & event menus</p>
+          </div>
+        </article>
+
+        <!-- Print Card 9 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-1">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/print_jnp_3.jpg" alt="Jahan Numa Palace Heritage Letterhead & Corporate Stationery" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Corporate Stationery</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Jahan Numa Palace — Heritage Folio</h4>
+            <p class="portfolio-item-meta">Embossed envelopes, letterheads & VIP invitation folders</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 05. POSTERS SECTION -->
+    <section class="portfolio-category-section" id="posters">
+      <div class="category-index-badge reveal-on-scroll">05 / 05 — POSTERS</div>
+      <div class="category-header-deck reveal-on-scroll">
+        <h3 class="section-headline">Campaign, Event & Advertising Posters</h3>
+        <p class="category-subtext">
+          Stately, high-impact poster designs engineered for out-of-home advertising, public campaigns, and luxury events with commanding visual authority.
+        </p>
+      </div>
+
+      <div class="category-grid category-grid-posters">
+        
+        <!-- Poster Card 1 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/poster_pmb_1.jpg" alt="Pushya Mitra Bhargav Public Campaign Poster" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Campaign Key Visual</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Public Leadership — Campaign Key Visual</h4>
+            <p class="portfolio-item-meta">Commanding portrait layout, dynamic typography & patriotic color hierarchy</p>
+          </div>
+        </article>
+
+        <!-- Poster Card 2 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-1">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/poster_pmb_2.jpg" alt="Election Campaign Advertising Creative" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Billboard Design</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Mass Advertising — Billboard Poster</h4>
+            <p class="portfolio-item-meta">High-visibility large format outdoor poster with punchy headline</p>
+          </div>
+        </article>
+
+        <!-- Poster Card 3 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-2">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/poster_pmb_3.jpg" alt="Event Keynote & Rally Poster" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Event Poster</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Keynote & Public Rally Poster</h4>
+            <p class="portfolio-item-meta">Editorial event announcement, schedule structure & visual contrast</p>
+          </div>
+        </article>
+
+        <!-- Poster Card 4 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/poster_pmb_4.jpg" alt="Public Figure Promotional Poster" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Portrait Poster</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Civic Engagement — Vision Poster</h4>
+            <p class="portfolio-item-meta">Inspiring civic messaging with atmospheric gradient backdrops</p>
+          </div>
+        </article>
+
+        <!-- Poster Card 5 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-1">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/poster_jardin_2.jpg" alt="Jardin Hotel Dining & Event Poster" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Hospitality Event</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Jardin Hotel — Gala Dining Poster</h4>
+            <p class="portfolio-item-meta">Sensory floral backdrop with gold serifs and fine dining layout</p>
+          </div>
+        </article>
+
+        <!-- Poster Card 6 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-2">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/poster_jnr_1.jpg" alt="Jahan Numa Retreat Wilderness Experience Poster" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Experiential Poster</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Jahan Numa Retreat — Eco Experience</h4>
+            <p class="portfolio-item-meta">Immersive wilderness photography, rustic tones & luxury positioning</p>
+          </div>
+        </article>
+
+        <!-- Poster Card 7 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-3">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/poster_jardin_4.jpg" alt="Jardin Hotel Botanical Soirée Poster" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Gala Poster</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Jardin Hotel — Botanical Soirée</h4>
+            <p class="portfolio-item-meta">High-glamour evening event creative with gilded typography & botanical illustration</p>
+          </div>
+        </article>
+
+        <!-- Poster Card 8 -->
+        <article class="portfolio-item-card reveal-on-scroll">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/poster_jnr_2.jpg" alt="Jahan Numa Retreat Wildlife Awakening Poster" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Safari Poster</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Jahan Numa Retreat — Wildlife Awakening</h4>
+            <p class="portfolio-item-meta">Dramatic wildlife encounter poster with natural earth tones & luxury typography</p>
+          </div>
+        </article>
+
+        <!-- Poster Card 9 -->
+        <article class="portfolio-item-card reveal-on-scroll delay-1">
+          <div class="portfolio-media-wrap">
+            <img src="assets/projects/poster_orchid_2.jpg" alt="Orchid Resorts Luxury Nature Retreat Poster" class="portfolio-item-img">
+            <span class="portfolio-item-badge">✦ Eco-Luxury Poster</span>
+            <div class="portfolio-overlay-pill">Click to Preview ⤢</div>
+          </div>
+          <div class="portfolio-item-info">
+            <h4 class="portfolio-item-title">Orchid Resorts — Nature Retreat</h4>
+            <p class="portfolio-item-meta">Cinematic architectural poster balancing lush tropical greenery with modern minimalism</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Transition Statement Banner -->
+    <div class="details-statement-banner reveal-on-scroll">
+      <h4 class="details-statement-text">
+        Great design is not just what looks good — it's what makes a brand <span>unforgettable</span>.
+      </h4>
+    </div>
+
+    <!-- ==========================================================================
+         SERVICES SECTION (GRAPHIC DESIGN CAPABILITIES)
+         ========================================================================== -->
+    <section class="content-section" id="services">
+      <div class="section-tag-wrapper reveal-on-scroll">
+        <span class="section-tag-dot"></span>
+        <span class="section-tag-title">Design Services</span>
+      </div>
+      <h3 class="section-headline reveal-on-scroll">Design Solutions Tailored For Impact</h3>
+
+      <div class="services-grid">
+        
+        <!-- Service 1 -->
+        <div class="service-card reveal-on-scroll">
+          <div class="service-icon-box">🎨</div>
+          <h4 class="service-card-title">Brand Identity & Logo Systems</h4>
+          <p class="service-card-desc">
+            Complete, strategic visual identity ecosystems built to elevate your positioning, command premium pricing, and foster instant customer recognition.
+          </p>
+          <ul class="service-deliverables-list">
+            <li>Primary & Secondary Logo Suites</li>
+            <li>Comprehensive Brand Guidelines (Style Guide)</li>
+            <li>Custom Typography & Curated Color Palettes</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card reveal-on-scroll delay-1">
+          <div class="service-icon-box">📦</div>
+          <h4 class="service-card-title">Packaging & Label Design</h4>
+          <p class="service-card-desc">
+            Shelf-stopping packaging crafted for physical and digital retail. Engineered from technical dielines to tactile unboxing experiences and 3D renders.
+          </p>
+          <ul class="service-deliverables-list">
+            <li>Custom Dieline Layouts & Print-Ready Files</li>
+            <li>Embossing, Foil-Stamping & UV Finish Specs</li>
+            <li>Photorealistic 3D Product Mockups</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card reveal-on-scroll delay-2">
+          <div class="service-icon-box">📖</div>
+          <h4 class="service-card-title">Editorial & Publication Design</h4>
+          <p class="service-card-desc">
+            High-end editorial layouts for print and digital publishing. Crafted with rigorous typographic hierarchy, grid discipline, and artistic pacing.
+          </p>
+          <ul class="service-deliverables-list">
+            <li>Magazines, Lookbooks & Annual Reports</li>
+            <li>Coffee Table Books & Product Catalogs</li>
+            <li>Interactive Digital PDFs & E-Publications</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card reveal-on-scroll delay-3">
+          <div class="service-icon-box">⚡</div>
+          <h4 class="service-card-title">Marketing Collateral & Key Visuals</h4>
+          <p class="service-card-desc">
+            High-conversion promotional graphics and campaign visual assets that maintain brand consistency across billboards, social media, and event signage.
+          </p>
+          <ul class="service-deliverables-list">
+            <li>Large-Format Out-of-Home (OOH) Billboards</li>
+            <li>Social Media Launch Kits & Ad Sets</li>
+            <li>Event Booth Graphics & Exhibition Signage</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TESTIMONIALS SECTION
+         ========================================================================== -->
+    <section class="content-section" id="testimonials">
+      <div class="section-tag-wrapper reveal-on-scroll">
+        <span class="section-tag-dot"></span>
+        <span class="section-tag-title">Client Feedback</span>
+      </div>
+      <h3 class="section-headline reveal-on-scroll">What Founders & Creative Directors Say</h3>
+
+      <div class="testimonials-grid">
+        
+        <!-- Review 1 -->
+        <div class="testimonial-card reveal-on-scroll">
+          <div class="stars-row">★★★★★</div>
+          <p class="testimonial-quote">
+            "Mannan transformed our brand identity into a luxury masterpiece. The custom typography and packaging he designed elevated our retail presence and allowed us to position at a 40% premium."
+          </p>
+          <div class="testimonial-author-box">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Alexander Vance" class="author-avatar">
+            <div>
+              <div class="author-name">Alexander Vance</div>
+              <div class="author-role">Creative Director, Vance Luxury Group</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card reveal-on-scroll delay-1">
+          <div class="stars-row">★★★★★</div>
+          <p class="testimonial-quote">
+            "The packaging Mannan created for our Trava botanical line stood out immediately on retail shelves. His understanding of dielines, print finishes, and color theory is second to none."
+          </p>
+          <div class="testimonial-author-box">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Elena Rostova" class="author-avatar">
+            <div>
+              <div class="author-name">Elena Rostova</div>
+              <div class="author-role">Founder, KeyPharma Consumer Brands</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card reveal-on-scroll delay-2">
+          <div class="stars-row">★★★★★</div>
+          <p class="testimonial-quote">
+            "Mannan is that rare designer who combines exquisite artistic instinct with razor-sharp commercial strategy. Every asset was delivered print-ready and on schedule."
+          </p>
+          <div class="testimonial-author-box">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Marcus Brody" class="author-avatar">
+            <div>
+              <div class="author-name">Marcus Brody</div>
+              <div class="author-role">Head of Brand, Rogue Global</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION & INTERACTIVE DESIGN ESTIMATOR
+         ========================================================================== -->
+    <section class="content-section" id="contact">
+      <div class="contact-container reveal-on-scroll">
+        <div class="contact-layout">
+          
+          <!-- Left Info -->
+          <div class="contact-left">
+            <div class="section-tag-wrapper">
+              <span class="section-tag-dot"></span>
+              <span class="section-tag-title">Let's Connect</span>
+            </div>
+            <h3>Have a vision?<br>Let’s design something iconic.</h3>
+            <p>
+              I take on a limited number of select brand identity and graphic design commissions each quarter to ensure uncompromising focus and world-class craft.
+            </p>
+
+            <div class="contact-direct-links">
+              <a href="mailto:mannan@mannanansari.design" class="direct-link-item">
+                <span class="direct-icon">✉</span>
+                <span>mannan@mannanansari.design</span>
+              </a>
+              <a href="tel:+1234567890" class="direct-link-item">
+                <span class="direct-icon">📞</span>
+                <span>Book a 15-min Brand Discovery Call</span>
+              </a>
+              <span class="direct-link-item">
+                <span class="direct-icon">📍</span>
+                <span>Available Worldwide / Remote</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Right Interactive Form -->
+          <form class="contact-form" id="projectContactForm">
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="clientName">Your Name</label>
+                <input type="text" id="clientName" placeholder="e.g. John Doe" required>
+              </div>
+              <div class="form-field">
+                <label for="clientEmail">Email Address</label>
+                <input type="email" id="clientEmail" placeholder="e.g. john@company.com" required>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>Estimated Project Budget</label>
+              <div class="budget-pills-row">
+                <span class="budget-chip active">$2k – $5k</span>
+                <span class="budget-chip">$5k – $10k</span>
+                <span class="budget-chip">$10k – $20k</span>
+                <span class="budget-chip">$20k+</span>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="projectDetails">About Your Design Needs</label>
+              <textarea id="projectDetails" placeholder="Tell me about your brand, deliverables (Logo, Packaging, Rebranding, Print), and timeline..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-form">
+              <span>Send Design Brief</span>
+              <span>→</span>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SITE FOOTER
+         ========================================================================== -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <a href="#" class="brand-logo">
+          MANNAN ANSARI <span class="logo-dot"></span>
+        </a>
+        <ul class="footer-nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#social-media">Work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Mannan Ansari. All rights reserved. Crafted with precision.</span>
+        <span>Aesthetic Brilliance × Visual Mastery</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="form-toast" id="formToast">
+    <span>✦</span>
+    <span>Thank you! Your design brief has been sent. Mannan will reply within 24 hours.</span>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top">↑</button>
+
+  <!-- Full-Screen Lightbox Modal -->
+  <div class="lightbox-modal" id="portfolioLightbox" aria-hidden="true">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Preview">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous Image">‹</button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next Image">›</button>
+      <div class="lightbox-image-wrapper">
+        <img src="" alt="" id="lightboxImg" class="lightbox-img">
+      </div>
+      <div class="lightbox-caption">
+        <span class="lightbox-category" id="lightboxCat">Portfolio</span>
+        <h4 class="lightbox-title" id="lightboxTitle"></h4>
+        <p class="lightbox-desc" id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
